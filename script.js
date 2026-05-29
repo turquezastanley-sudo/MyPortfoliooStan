@@ -1,53 +1,53 @@
-const projects = [
+const experiences = [
     {
-        title: "Responsive Interface Architecture",
-        desc: "A framework compilation mapping semantic sections with modern flexbox structures and smooth system scroll hooks.",
-        tech: ["HTML5", "Tailwind CSS", "JavaScript"],
-        icon: "fa-laptop-code"
+        title: "E-Commerce Platform",
+        desc: "Modern shopping experience with responsive design",
+        tech: ["React", "Tailwind CSS", "Node.js"],
+        icon: "fa-shopping-bag"
     },
     {
-        title: "Relational Database Subsystem",
-        desc: "Structured data storage layout designed with complex schema queries to handle transactional tracking requests.",
-        tech: ["SQL Integration", "Schema Design"],
-        icon: "fa-database"
+        title: "Mobile App Design",
+        desc: "User-focused mobile application interface",
+        tech: ["Figma", "UI/UX", "Prototyping"],
+        icon: "fa-mobile"
     },
     {
-        title: "Interface Prototyping Module",
-        desc: "Comprehensive blueprint charting functional user behaviors, components, and layout hierarchies.",
-        tech: ["Figma Layouts", "UI Components"],
-        icon: "fa-cubes"
+        title: "Brand Identity",
+        desc: "Complete branding system and guidelines",
+        tech: ["Branding", "Typography", "Color Theory"],
+        icon: "fa-palette"
     }
 ];
 
-const projectsGrid = document.getElementById('projects-grid');
-projects.forEach(proj => {
+const experienceGrid = document.getElementById('experience-grid');
+experiences.forEach(proj => {
     const techBadges = proj.tech.map(t => 
-        `<span class="bg-slate-900 text-sky-400 text-xs px-3 py-1 rounded-md font-semibold border border-slate-800">${t}</span>`
+        `<span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded font-semibold">${t}</span>`
     ).join('');
 
-    projectsGrid.innerHTML += `
-        <div class="bg-cardBg rounded-2xl border border-slate-800/80 overflow-hidden hover:border-slate-700 hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
-            <div class="p-6 space-y-4">
-                <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-accentNeon text-xl group-hover:scale-110 transition duration-300">
-                    <i class="fa-solid ${proj.icon}"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white group-hover:text-accentNeon transition">${proj.title}</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">${proj.desc}</p>
+    experienceGrid.innerHTML += `
+        <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover:border-red-500 hover:shadow-lg hover:shadow-red-500/20 transition duration-300 group">
+            <div class="h-48 bg-gray-800 flex items-center justify-center text-red-500 text-4xl group-hover:bg-red-500/10 transition">
+                <i class="fa-solid ${proj.icon}"></i>
             </div>
-            <div class="p-6 pt-0 flex flex-wrap gap-2">${techBadges}</div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-red-500 transition">${proj.title}</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">${proj.desc}</p>
+                <div class="flex flex-wrap gap-2">${techBadges}</div>
+            </div>
         </div>
     `;
 });
 
 const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+document.addEventListener('click', (e) => {
+    if (e.target.closest('#menu-btn')) {
+    }
 });
 
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const name = document.getElementById('user-name').value;
     const email = document.getElementById('user-email').value;
@@ -65,14 +65,14 @@ contactForm.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (data.success) {
-            alert(`SUCCESS: ${data.message}`);
-            contactForm.reset(); 
+            alert(`✅ Success! ${data.message}`);
+            contactForm.reset();
         } else {
-            alert(`SERVER CORRUPTION REJECT: ${data.message}`);
+            alert(`⚠️ Error: ${data.message}`);
         }
     } catch (error) {
-        console.error("Transmission Exception Fail Link:", error);
-        alert("Network Error: Could not connect to the backend server framework.");
+        console.error("Error:", error);
+        alert("❌ Network Error: Could not connect to server");
     }
 });
 
