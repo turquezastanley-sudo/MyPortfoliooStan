@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley - Web Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #000; }
+        .sidebar-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 6px;
+            line-height: 1;
+        }
+        .photo-frame {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #FF2D2D, #CC0000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 0 80px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.3);
+            position: relative;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            position: relative;
+        }
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #FF0000;
+        }
+        .btn-red {
+            background: #FF0000;
+            transition: all 0.3s;
+        }
+        .btn-red:hover {
+            background: #CC0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+        .nav-contact {
+            background: #FF0000;
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: 8px;
+        }
+        .nav-contact:hover {
+            background: #CC0000;
+        }
+    </style>
+</head>
+<body class="text-white font-sans">
+
+    <header class="fixed w-full top-0 left-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
+                    <span class="font-black text-white">S</span>
+                </div>
+                <span class="text-2xl font-black">Stanley Jade E. Turqueza</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-gray-300">Home</a>
+                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#skills" class="nav-link text-gray-300">Skills</a>
+                <a href="#experience" class="nav-link text-gray-300">Experience</a>
+                <a href="#contact" class="nav-contact">Contact</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-red-500">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center pt-20 hero-bg relative overflow-hidden">
+            <div class="absolute left-0 top-0 h-full w-32 bg-red-600 flex items-center justify-center">
+                <div class="sidebar-text text-white">
+                    PORTFOLIO<br>DESIGN
+                </div>
+            </div>
+
+            <div class="w-full px-6 ml-32">
+                <div class="max-w-7xl mx-auto grid grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8 pr-12">
+                        <div>
+                            <p class="text-lg text-gray-400 mb-2">Hi, I'm</p>
+                            <h1 class="text-6xl font-black text-white mb-2">Stanley</h1>
+                            <h2 class="text-6xl font-black text-red-500">Student</h2>
+                        </div>
+                        
+                        <p class="text-gray-400 text-lg max-w-md leading-relaxed">
+                            I am a 3rd-year OF Bachelor of Science in Information Technology student (BSIT 602) at STI College San Jose del Monte. 
+                            I built this portfolio to show my performance tasks I've done for our Web Systems and Technologies subject.
+                            <br><br>
+                            For me, i like the way that this Performance Task is hard. 
+                            That make me to gain another experience and knowledge about web design.     
+                        </p> 
+                        
+                        <div>
+                            <p class="text-white font-bold mb-4">Find Me on</p>
+                            <div class="flex gap-5">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4">
+                            <button class="btn-red text-white font-bold px-8 py-3 rounded-lg">
+                                Like me?
+                            </button>
+                            <button class="btn-red text-white font-bold px-8 py-3 rounded-lg">
+                                Add me!
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center relative">
+                        <div class="photo-frame">
+                            <img src="my-photo.jpg.jpg" alt="Stanley">
+                        </div>
+                        <div class="absolute -z-10 w-64 h-64 rounded-full bg-red-600/20 blur-3xl -top-10 -right-20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-28 px-6 bg-black border-t border-gray-800">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-black text-white mb-4">About Me</h2>
+                    <p class="text-gray-400 mb-6">I am an IT student currently giving my all to finish my degree. Right now, my main goal is to pass all my subjects and successfully complete our capstone research project. I believe in working hard and staying focused until the job is done.</p>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex gap-3 items-start"><span class="text-red-500 mt-1"><i class="fa-solid fa-check"></i></span> I am dedicated to upgrading my technical skills in HTML, CSS, Java, and Python to improve the quality of my work.</li>
+                        <li class="flex gap-3 items-start"><span class="text-red-500 mt-1"><i class="fa-solid fa-check"></i></span> I am actively working on becoming a more confident English speaker and developing my social thinking skills to communicate better with others.</li>
+                        <li class="flex gap-3 items-start"><span class="text-red-500 mt-1"><i class="fa-solid fa-check"></i></span> I am focusing on my health so I can push myself even harder in my studies.</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 rounded-3xl border border-gray-800 p-10">
+                    <h3 class="text-2xl font-bold text-white mb-4">A Little More About Me</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">Beyond my school work, I really enjoy learning new things and challenging myself to go beyond my limits. I also love helping others, because I believe in a mutual exchange of support. Whether I am working on a performance task, I always try to be a reliable groupmate and a constant learner about others.</p>
+                    <div class="grid gap-4">
+                        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
+                            <p class="text-gray-400 text-sm">Focus</p>
+                            <p class="text-white font-bold text-xl">Passing my subjects and finishing my Capstone</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
+                            <p class="text-gray-400 text-sm">Goal</p>
+                            <p class="text-white font-bold text-xl">Graduating and have a successful career</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-28 bg-gray-950 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white mb-4">Skills</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">I replace work into a skill. Because i dont have any work experience right now.</p>
+                </div>
+                <div class="max-w-5xl mx-auto bg-gray-900 rounded-3xl border border-gray-800 p-10">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-left text-gray-300">
+                            <thead>
+                                <tr>
+                                    <th class="pb-4 text-sm font-semibold uppercase tracking-wide">Skills</th>
+                                    <th class="pb-4 text-sm font-semibold uppercase tracking-wide">Level of Competency</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr>
+                                    <td class="py-4">HTML</td>
+                                    <td class="py-4">Intermediate</td>
+                                </tr>
+                                <tr class="bg-gray-950">
+                                    <td class="py-4">CSS</td>
+                                    <td class="py-4">Intermediate</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">C#</td>
+                                    <td class="py-4">Beginner</td>
+                                </tr>
+                                <tr class="bg-gray-950">
+                                    <td class="py-4">Java</td>
+                                    <td class="py-4">Intermediate</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">Python</td>
+                                    <td class="py-4">Beginner</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-28 bg-gray-950 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-white mb-4">Experience</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">A collection of recent projects and experiences during college.</p>
+                </div>
+                <div class="mt-10 bg-gray-900 rounded-3xl border border-gray-800 p-10">
+                    <h3 class="text-3xl font-black text-white mb-8">Trainings, Seminars, or Workshops Attended</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-left text-gray-300">
+                            <thead>
+                                <tr>
+                                    <th class="pb-4 text-sm font-semibold uppercase tracking-wide">Inclusive Dates</th>
+                                    <th class="pb-4 text-sm font-semibold uppercase tracking-wide">Title of Training, Seminar, or Workshop</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr>
+                                    <td class="py-4">2025</td>
+                                    <td class="py-4">SAP Business One</td>
+                                </tr>
+                                <tr class="bg-gray-950">
+                                    <td class="py-4">2024</td>
+                                    <td class="py-4">NSTP Training</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-28 px-6 bg-black">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-white mb-4">Want to Contact me?</h2>
+                    <p class="text-gray-400">Feel free to send me a message if you want to contact me.</p>
+                </div>
+                
+                <form id="contact-form" class="max-w-2xl mx-auto bg-gray-900 p-12 rounded-2xl border border-gray-800">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-300 mb-2">Name</label>
+                            <input type="text" id="user-name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500" placeholder="Your name" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-300 mb-2">Email</label>
+                            <input type="email" id="user-email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500" placeholder="your@email.com" required />
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Message</label>
+                        <textarea id="user-message" rows="6" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 resize-none" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full btn-red text-white font-bold py-3 rounded-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-8 text-center text-gray-500">
+        <p>&copy; <span id="current-year"></span> Have a wonderful day!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
